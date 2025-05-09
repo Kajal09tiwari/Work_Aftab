@@ -26,4 +26,4 @@ if __name__ == "__main__":
     X = np.load(f"X_client_{client_id}.npy")
     y = np.load(f"y_client_{client_id}.npy")
     client = AirQualityClient(X, y)
-    fl.client.start_numpy_client("localhost:8080", client=client)
+    fl.client.start_numpy_client(server_address="localhost:8080", client=client)
